@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Customers</h2>
+    <table>
+        <tr><th>ID</th><th>Email</th><th>Name</th><th>Role</th></tr>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.role }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Invoices</h2>
+    <table>
+        <tr><th>ID</th><th>Customer ID</th><th>Amount</th><th>Status</th><th>Due Date</th><th>View</th></tr>
+        {% for invoice in invoices %}
+        <tr>
+            <td>{{ invoice.id }}</td>
+            <td>{{ invoice.customer_id }}</td>
+            <td>${{ invoice.amount }}</td>
+            <td>{{ invoice.status }}</td>
+            <td>{{ invoice.due_date }}</td>
+            <td><a href="/invoices/{{ invoice.id }}">View</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

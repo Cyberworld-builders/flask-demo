@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice #{{ invoice.id }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .invoice { max-width: 600px; margin: auto; }
+        .header { text-align: center; }
+        .details { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="invoice">
+        <div class="header">
+            <h1>Invoice #{{ invoice.id }}</h1>
+        </div>
+        <div class="details">
+            <p><strong>Customer ID:</strong> {{ invoice.customer_id }}</p>
+            <p><strong>Amount:</strong> ${{ invoice.amount }}</p>
+            <p><strong>Status:</strong> {{ invoice.status }}</p>
+            <p><strong>Due Date:</strong> {{ invoice.due_date }}</p>
+        </div>
+    </div>
+</body>
+</html>

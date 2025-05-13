@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing Engine Demo</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .api-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to Billing Engine Demo</h1>
+            <p>A simple Flask application demonstrating billing engine concepts</p>
+        </div>
+
+        <div class="api-section">
+            <h2>Available API Endpoints</h2>
+            <ul>
+                <li><code>POST /api/customers</code> - Create a new customer</li>
+                <li><code>GET /api/customers/&lt;id&gt;</code> - Get customer details</li>
+                <li><code>POST /api/customers/&lt;id&gt;/payment_methods</code> - Add payment method</li>
+                <li><code>POST /api/payments</code> - Process payment</li>
+                <li><code>POST /api/subscriptions</code> - Create subscription</li>
+                <li><code>POST /api/subscriptions/&lt;id&gt;/cancel</code> - Cancel subscription</li>
+                <li><code>GET /api/invoices/&lt;id&gt;</code> - Get invoice details</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h2>Admin Dashboard</h2>
+            <p>Access the admin dashboard at: <a href="/dashboard?role=admin">/dashboard?role=admin</a></p>
+        </div>
+    </div>
+</body>
+</html> 
